@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Biblioteca.Models.Livro>
+@{
+    ViewData["Title"] = "Listar";
+}
+
+<h2>Listagem de Livros</h2>
+
+<a asp-action="Novo" class=" btn btn-success"><i class="glyphicon glyphicon-plus"></i></a>
+<table class="table table-hover table-striped" >
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Autor</th>
+            <th>Data de Publicação</th>
+            <th>Editora</th>
+        </tr>
+        
+    </thead>
+    <tbody>
+        @foreach (Livro livro in Model)
+        {
+        <tr>
+            <td>@livro.Titulo</td>
+            <td>@livro.Autor</td>
+            <td>@livro.DtPublicacao.Date</td>
+            <td>@livro.Editora</td>&nbsp;
+            <td>
+                <a asp-action="/Editar/@livro.Id" class="btn btn-default"><i class="glyphicon glyphicon-edit"></i></a>
+                <a asp-action="/Excluir/@livro.Id" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+

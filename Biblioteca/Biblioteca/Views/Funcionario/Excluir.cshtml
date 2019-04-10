@@ -1,0 +1,26 @@
+﻿@model Biblioteca.Models.Funcionario
+@{
+    ViewData["Title"] = "Excluir";
+}
+
+<h1>Excluir</h1>
+<form action="/Funcionario/Excluir/" method="post">
+    <label>ID: @Model.Id</label>
+    <input type="hidden" name="Id" value="@Model.Id" /><br />
+    <label>Nome</label><br />
+    <input type="text" name="Nome" value="@Model.Nome" disabled /><br />
+    <label>CPF</label><br />
+    <input type="text" name="Cpf" value="@Model.Cpf" disabled /><br />
+    <label>Cargo</label><br />
+    <input type="text" name="Cargo" value="@Model.Cargo" disabled /><br />
+    <label>Data de Admissão</label><br />
+    <input type="text" name="DataAdmissao" value="@Model.DataAdmissao.Date" disabled /><br />
+    <label>Matrícula</label><br />
+    <input type="text" name="Matricula" value="@Model.Matricula" disabled /><br />
+    <label>Pis</label><br />
+    <input type="text" name="Pis" value="@Model.Pis" disabled /><br />
+    <label>Salário</label><br />
+    <input type="text" name="Salario" value="@Model.Salario" disabled /><br />
+    <p><a href="/Funcionario/Listar">Cancelar</a><input type="submit" name="Excluir" value="Concluir" /></p>
+</form>
+
