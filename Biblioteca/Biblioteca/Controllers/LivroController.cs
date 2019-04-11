@@ -38,9 +38,17 @@ namespace Biblioteca.Controllers
             livro.Delete();
             return RedirectToAction("Listar");
         }
-        //public IActionResult Editar(Livro livro)
-        //{
-
-        //}
+        [HttpGet]
+        public IActionResult Editar(int id)
+        {
+            Livro livro = new Livro().SearchForId(id);
+            return View(livro);
+        }
+        [HttpPost]
+        public IActionResult Editar(Livro livro)
+        {
+            livro.Update();
+            return RedirectToAction("Listar");
+        }
     }
 }

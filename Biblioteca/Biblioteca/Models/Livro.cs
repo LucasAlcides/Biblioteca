@@ -38,7 +38,6 @@ namespace Biblioteca.Models
             livro.Editora = this.Editora;
             livro.DtPublicacao = this.DtPublicacao;
             livro.Autor = this.Autor;
-
         }
         public void Delete()
         {
@@ -53,8 +52,6 @@ namespace Biblioteca.Models
         {
             return Banco.livros;
         }
-        //public Livro SearchForTitle(Livro livro)
-        //{
-        //}
+        
     }
 }

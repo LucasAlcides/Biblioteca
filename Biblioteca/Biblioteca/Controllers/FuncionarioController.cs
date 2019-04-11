@@ -38,9 +38,17 @@ namespace Biblioteca.Controllers
             funcionario.Delete();
             return RedirectToAction("Listar");
         }
-        //public IActionResult Editar()
-        //{
-
-        //}
+        [HttpGet]
+        public IActionResult Editar(int id)
+        {
+            Funcionario funcionario = new Funcionario().SearchForId(id);
+            return View(funcionario);
+        }
+        [HttpPost]
+        public IActionResult Editar(Funcionario funcionario)
+        {
+            funcionario.Update();
+            return RedirectToAction("Listar");
+        }
     }
 }

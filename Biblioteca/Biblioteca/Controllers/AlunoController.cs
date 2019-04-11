@@ -43,10 +43,18 @@ namespace Biblioteca.Controllers
             aluno.Delete();
             return RedirectToAction("Listar");
         }
-        //       public IActionResult Editar()
-        //       {
-
-        //       }
-        //}
+        [HttpGet]
+        public IActionResult Editar(int id)
+        {
+            Aluno aluno = new Aluno().SearchForId(id);
+            return View(aluno);
+        }
+        [HttpPost]
+        public IActionResult Editar(Aluno aluno)
+        {
+            aluno.Update();
+            return RedirectToAction("Listar");
+        }
     }
 }
+
