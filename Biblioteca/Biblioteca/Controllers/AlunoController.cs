@@ -35,7 +35,7 @@ namespace Biblioteca.Controllers
         public IActionResult Excluir(int id)
         {
             Aluno aluno = new Aluno().SearchForId(id);
-            return View("Listar");
+            return View(aluno);
         }
         [HttpPost]
         public IActionResult Excluir(Aluno aluno)
