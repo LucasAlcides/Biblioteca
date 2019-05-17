@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using AlcidesLaboratorio.Contexto;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -30,10 +33,12 @@ namespace AlcidesLaboratorio
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            var caminhoBanco = Path.Combine(Directory.GetCurrentDirectory());
+            var ConnectionString = string.Format(@"Server=(LocalDB)\MSSQLlocaldb; Initial Catalog=LabDB; Integrate Security = SSPI; AttachedDbFilename={0}\banco-lab.mdf");
+            services.AddDbContext<LaboratorioContexto>(options => options.UseSqlServer(ConnectionString));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
