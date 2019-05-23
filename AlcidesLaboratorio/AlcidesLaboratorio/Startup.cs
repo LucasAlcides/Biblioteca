@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AlcidesLaboratorio.Contexto;
+using AlcidesLaboratorio.Repositories;
+using AlcidesLaboratorio.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -38,6 +40,9 @@ namespace AlcidesLaboratorio
             services.AddDbContext<LaboratorioContexto>(options => options.UseSqlServer(ConnectionString));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddTransient<PlanoDeSaudeRepositories, PlanoDeSaudeRepositories>();
+            services.AddTransient<PlanoDeSaudeService, PlanoDeSaudeService>();
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
