@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AlcidesLaboratorio.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,5 +9,9 @@ namespace AlcidesLaboratorio.Contexto
 {
     public class LaboratorioContexto : DbContext
     {
+        public LaboratorioContexto(DbContextOptions<LaboratorioContexto> DbContextoptions) : base(DbContextoptions)
+        {
+        }
+        public DbSet<PlanoDeSaude> Planos { get; set; }
     }
 }

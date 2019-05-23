@@ -338,3 +338,4 @@ C:\Users\UNIRON\Desktop\Biblioteca\AlcidesLaboratorio\AlcidesLaboratorio\bin\Deb
 C:\Users\UNIRON\Desktop\Biblioteca\AlcidesLaboratorio\AlcidesLaboratorio\obj\Debug\net461\AlcidesLaboratorio.Views.pdb
 C:\Users\UNIRON\Desktop\Biblioteca\AlcidesLaboratorio\AlcidesLaboratorio\obj\Debug\net461\AlcidesLaboratorio.exe
 C:\Users\UNIRON\Desktop\Biblioteca\AlcidesLaboratorio\AlcidesLaboratorio\obj\Debug\net461\AlcidesLaboratorio.pdb
+C:\Users\UNIRON\Desktop\Biblioteca\AlcidesLaboratorio\AlcidesLaboratorio\bin\Debug\net461\Microsoft.EntityFrameworkCore.Design.dll

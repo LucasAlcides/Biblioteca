@@ -5,13 +5,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AlcidesLaboratorio.Models;
+using AlcidesLaboratorio.Services;
 
 namespace AlcidesLaboratorio.Controllers
 {
     public class HomeController : Controller
     {
+        //private readonly planodesaudeservice planodesaudeservice;
+
+        //public homecontroller(planodesaudeservice planodesaudeservice)
+        //{
+        //    this.planodesaudeservice = planodesaudeservice;
+        //}
         public IActionResult Index()
         {
+            //IList<PlanoDeSaude> planos = planoDeSaudeService.FindAll();
             return View();
         }
 

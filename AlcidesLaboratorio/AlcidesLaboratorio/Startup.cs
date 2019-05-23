@@ -34,7 +34,7 @@ namespace AlcidesLaboratorio
             });
 
             var caminhoBanco = Path.Combine(Directory.GetCurrentDirectory());
-            var ConnectionString = string.Format(@"Server=(LocalDB)\MSSQLlocaldb; Initial Catalog=LabDB; Integrate Security = SSPI; AttachedDbFilename={0}\banco-lab.mdf");
+            var ConnectionString = @"Server=(local); Initial Catalog=LabDB; Integrated Security = true";
             services.AddDbContext<LaboratorioContexto>(options => options.UseSqlServer(ConnectionString));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
