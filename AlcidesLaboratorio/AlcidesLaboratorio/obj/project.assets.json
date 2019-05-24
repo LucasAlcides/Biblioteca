@@ -8823,11 +8823,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\UNIRON\\Desktop\\Biblioteca\\AlcidesLaboratorio\\AlcidesLaboratorio\\AlcidesLaboratorio.csproj",
+      "projectUniqueName": "C:\\Users\\UNIRON\\Desktop\\Biblioteca e Montadora\\AlcidesLaboratorio\\AlcidesLaboratorio\\AlcidesLaboratorio.csproj",
       "projectName": "AlcidesLaboratorio",
-      "projectPath": "C:\\Users\\UNIRON\\Desktop\\Biblioteca\\AlcidesLaboratorio\\AlcidesLaboratorio\\AlcidesLaboratorio.csproj",
+      "projectPath": "C:\\Users\\UNIRON\\Desktop\\Biblioteca e Montadora\\AlcidesLaboratorio\\AlcidesLaboratorio\\AlcidesLaboratorio.csproj",
       "packagesPath": "C:\\Users\\UNIRON\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\UNIRON\\Desktop\\Biblioteca\\AlcidesLaboratorio\\AlcidesLaboratorio\\obj\\",
+      "outputPath": "C:\\Users\\UNIRON\\Desktop\\Biblioteca e Montadora\\AlcidesLaboratorio\\AlcidesLaboratorio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
