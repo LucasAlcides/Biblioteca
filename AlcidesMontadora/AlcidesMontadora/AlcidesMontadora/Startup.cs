@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AlcidesMontadora.Contexto;
+using AlcidesMontadora.Repository;
+using AlcidesMontadora.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -36,6 +38,30 @@ namespace AlcidesMontadora
             services.AddDbContext<MontadoraContexto>(options => options.UseSqlServer(ConnectionString));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddTransient<CidadeRepository, CidadeRepository>();
+            services.AddTransient<CidadeServices, CidadeServices>();
+
+            services.AddTransient<ClienteRepository, ClienteRepository>();
+            services.AddTransient<ClienteServices, ClienteServices>();
+
+            services.AddTransient<FornecedorRepository, FornecedorRepository>();
+            services.AddTransient<FonecedorServices, FonecedorServices>();
+
+            services.AddTransient<MontadorRepository, MontadorRepository>();
+            services.AddTransient<MontadorServices, MontadorServices>();
+
+            services.AddTransient<PecaDoVeiculoRepository, PecaDoVeiculoRepository>();
+            services.AddTransient<PecaDoVeiculoServices, PecaDoVeiculoServices>();
+
+            services.AddTransient<PecaRepository, PecaRepository>();
+            services.AddTransient<PecaServices, PecaServices>();
+
+            services.AddTransient<UsuarioRepository, UsuarioRepository>();
+            services.AddTransient<UsuarioServices, UsuarioServices>();
+
+            services.AddTransient<VeiculoRepository, VeiculoRepository>();
+            services.AddTransient<VeiculoServices, VeiculoServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

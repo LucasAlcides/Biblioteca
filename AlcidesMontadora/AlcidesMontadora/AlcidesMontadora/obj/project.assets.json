@@ -8813,23 +8813,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\UNIRON\\.nuget\\packages\\": {},
+    "C:\\Users\\lucas\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\UNIRON\\Desktop\\Biblioteca e Montadora\\AlcidesMontadora\\AlcidesMontadora\\AlcidesMontadora\\AlcidesMontadora.csproj",
+      "projectUniqueName": "E:\\Projetos\\Faculdade\\WebAvançada\\Biblioteca\\AlcidesMontadora\\AlcidesMontadora\\AlcidesMontadora\\AlcidesMontadora.csproj",
       "projectName": "AlcidesMontadora",
-      "projectPath": "C:\\Users\\UNIRON\\Desktop\\Biblioteca e Montadora\\AlcidesMontadora\\AlcidesMontadora\\AlcidesMontadora\\AlcidesMontadora.csproj",
-      "packagesPath": "C:\\Users\\UNIRON\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\UNIRON\\Desktop\\Biblioteca e Montadora\\AlcidesMontadora\\AlcidesMontadora\\AlcidesMontadora\\obj\\",
+      "projectPath": "E:\\Projetos\\Faculdade\\WebAvançada\\Biblioteca\\AlcidesMontadora\\AlcidesMontadora\\AlcidesMontadora\\AlcidesMontadora.csproj",
+      "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+      "outputPath": "E:\\Projetos\\Faculdade\\WebAvançada\\Biblioteca\\AlcidesMontadora\\AlcidesMontadora\\AlcidesMontadora\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\UNIRON\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
