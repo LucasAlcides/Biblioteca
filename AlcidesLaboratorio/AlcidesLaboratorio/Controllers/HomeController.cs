@@ -1,25 +1,22 @@
-﻿using System;
+﻿using AlcidesLaboratorio.Models;
+using AlcidesLaboratorio.Services;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using AlcidesLaboratorio.Models;
-using AlcidesLaboratorio.Services;
 
 namespace AlcidesLaboratorio.Controllers
 {
     public class HomeController : Controller
     {
-        //private readonly planodesaudeservice planodesaudeservice;
+        private readonly PlanoDeSaudeService planodesaudeservice;
 
-        //public homecontroller(planodesaudeservice planodesaudeservice)
-        //{
-        //    this.planodesaudeservice = planodesaudeservice;
-        //}
+        public HomeController(PlanoDeSaudeService planoDeSaudeService)
+        {
+            this.planodesaudeservice = planodesaudeservice;
+        }
         public IActionResult Index()
         {
-            //IList<PlanoDeSaude> planos = planoDeSaudeService.FindAll();
+            IList<PlanoDeSaude> planos = planodesaudeservice.FindAll();
             return View();
         }
 

@@ -1,9 +1,6 @@
 ﻿using AlcidesLaboratorio.Models;
 using AlcidesLaboratorio.Repositories;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace AlcidesLaboratorio.Services
 {

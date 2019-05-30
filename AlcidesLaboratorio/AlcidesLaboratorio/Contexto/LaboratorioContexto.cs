@@ -13,5 +13,6 @@ namespace AlcidesLaboratorio.Contexto
         {
         }
         public DbSet<PlanoDeSaude> Planos { get; set; }
+        public DbSet<Paciente> Pacientes { get; set; }
     }
 }
