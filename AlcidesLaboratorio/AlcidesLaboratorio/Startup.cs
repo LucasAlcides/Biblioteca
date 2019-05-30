@@ -43,6 +43,9 @@ namespace AlcidesLaboratorio
 
             services.AddTransient<PlanoDeSaudeRepositories, PlanoDeSaudeRepositories>();
             services.AddTransient<PlanoDeSaudeService, PlanoDeSaudeService>();
+
+            services.AddTransient<PacienteRepository, PacienteRepository>();
+            services.AddTransient<PacienteServices, PacienteServices>();
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

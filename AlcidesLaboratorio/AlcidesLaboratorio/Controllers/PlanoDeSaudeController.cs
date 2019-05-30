@@ -20,7 +20,7 @@ namespace AlcidesLaboratorio.Controllers
         {
             IList<PlanoDeSaude> planos = new List<PlanoDeSaude>();
             planoDeSaudeService.FindAll();
-            return View("");
+            return View(planos);
         }
     }
 }
