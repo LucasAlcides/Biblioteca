@@ -8,15 +8,9 @@ namespace AlcidesLaboratorio.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly PlanoDeSaudeService planodesaudeservice;
-
-        public HomeController(PlanoDeSaudeService planoDeSaudeService)
-        {
-            this.planodesaudeservice = planodesaudeservice;
-        }
+        
         public IActionResult Index()
         {
-            IList<PlanoDeSaude> planos = planodesaudeservice.FindAll();
             return View();
         }
 

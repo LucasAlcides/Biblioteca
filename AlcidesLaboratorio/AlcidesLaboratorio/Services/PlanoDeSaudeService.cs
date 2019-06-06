@@ -18,7 +18,7 @@ namespace AlcidesLaboratorio.Services
         }
         public IList<PlanoDeSaude> FindAll()
         {
-            return planoDeSaudeRepositories.FindAll();
+            return planoDeSaudeRepositories.GetAll();
         }
         public void Delete(PlanoDeSaude plano)
         {

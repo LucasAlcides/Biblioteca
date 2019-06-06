@@ -357,3 +357,5 @@ C:\Users\UNIRON\Desktop\Biblioteca\AlcidesLaboratorio\AlcidesLaboratorio\bin\Deb
 C:\Users\UNIRON\Desktop\Biblioteca\AlcidesLaboratorio\AlcidesLaboratorio\bin\Debug\net461\System.Composition.Runtime.dll
 C:\Users\UNIRON\Desktop\Biblioteca\AlcidesLaboratorio\AlcidesLaboratorio\bin\Debug\net461\System.Composition.TypedParts.dll
 C:\Users\UNIRON\Desktop\Biblioteca\AlcidesLaboratorio\AlcidesLaboratorio\bin\Debug\net461\Microsoft.VisualStudio.Web.BrowserLink.dll
+C:\Users\UNIRON\Desktop\Biblioteca\AlcidesLaboratorio\AlcidesLaboratorio\obj\Debug\net461\Razor\Views\PlanoDeSaude\Listar.g.cshtml.cs
+C:\Users\UNIRON\Desktop\Biblioteca\AlcidesLaboratorio\AlcidesLaboratorio\obj\Debug\net461\Razor\Views\PlanoDeSaude\Novo.g.cshtml.cs

@@ -12,15 +12,35 @@ namespace AlcidesLaboratorio.Controllers
         {
             this.planoDeSaudeService = planoDeSaudeService;
         }
-        public IActionResult Index()
+        public IActionResult Listar(IList<PlanoDeSaude> planos)
+        {
+            return View(planos);
+        }
+        [HttpPost]
+        public IActionResult Listar()
+        {
+            return View(planoDeSaudeService.FindAll());
+        }
+        [HttpGet]
+        public IActionResult Novo()
         {
             return View();
         }
-        public IActionResult Listar()
+        [HttpPost]
+        public IActionResult Novo(PlanoDeSaude planoDeSaude)
         {
-            IList<PlanoDeSaude> planos = new List<PlanoDeSaude>();
-            planoDeSaudeService.FindAll();
-            return View(planos);
+            if (ModelState.IsValid)
+            {
+                planoDeSaudeService.Add(planoDeSaude);
+                return RedirectToAction("Listar");
+            }
+            return View(                                                                                                                           );
+        
         }
+        //public IActionResult Delete(int id)
+        //{
+        //    return RedirectToAction();
+        //}
+
     }
 }
