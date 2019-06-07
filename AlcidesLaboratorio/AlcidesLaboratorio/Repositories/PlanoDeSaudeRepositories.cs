@@ -17,7 +17,7 @@ namespace AlcidesLaboratorio.Repositories
         {
           return Db.Planos.Where(p => p.Descricao.Contains(descricao)).ToList();
         }
-      
+        
 
     }
 }

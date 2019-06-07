@@ -359,3 +359,5 @@ C:\Users\UNIRON\Desktop\Biblioteca\AlcidesLaboratorio\AlcidesLaboratorio\bin\Deb
 C:\Users\UNIRON\Desktop\Biblioteca\AlcidesLaboratorio\AlcidesLaboratorio\bin\Debug\net461\Microsoft.VisualStudio.Web.BrowserLink.dll
 C:\Users\UNIRON\Desktop\Biblioteca\AlcidesLaboratorio\AlcidesLaboratorio\obj\Debug\net461\Razor\Views\PlanoDeSaude\Listar.g.cshtml.cs
 C:\Users\UNIRON\Desktop\Biblioteca\AlcidesLaboratorio\AlcidesLaboratorio\obj\Debug\net461\Razor\Views\PlanoDeSaude\Novo.g.cshtml.cs
+C:\Users\UNIRON\Desktop\Biblioteca\AlcidesLaboratorio\AlcidesLaboratorio\obj\Debug\net461\Razor\Views\PlanoDeSaude\Delete.g.cshtml.cs
+C:\Users\UNIRON\Desktop\Biblioteca\AlcidesLaboratorio\AlcidesLaboratorio\obj\Debug\net461\Razor\Views\PlanoDeSaude\Update.g.cshtml.cs

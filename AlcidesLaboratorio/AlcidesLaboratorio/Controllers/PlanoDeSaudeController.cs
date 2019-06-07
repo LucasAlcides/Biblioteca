@@ -31,16 +31,32 @@ namespace AlcidesLaboratorio.Controllers
         {
             if (ModelState.IsValid)
             {
-                planoDeSaudeService.Add(planoDeSaude);
-                return RedirectToAction("Listar");
+                planoDeSaudeService.Insert(planoDeSaude);
+                return RedirectToAction(nameof(Listar));
             }
-            return View(                                                                                                                           );
-        
-        }
-        //public IActionResult Delete(int id)
-        //{
-        //    return RedirectToAction();
-        //}
+            return View();                                                                                                                         
 
-    }
+        }
+        [HttpPost]
+        public IActionResult Delete(PlanoDeSaude planoDeSaude)
+        {
+            planoDeSaudeService.Delete(planoDeSaude);
+            return RedirectToAction(nameof(Listar));
+        }
+        public IActionResult Delete()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Update(PlanoDeSaude planoDeSaude)
+        {
+            planoDeSaudeService.Update(planoDeSaude);
+            return RedirectToAction(nameof(Listar));
+        }
+        public IActionResult Update()
+        {
+            return View();
+        }
+
+    } 
 }

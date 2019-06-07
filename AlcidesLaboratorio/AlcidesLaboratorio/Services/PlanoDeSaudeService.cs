@@ -4,34 +4,25 @@ using System.Collections.Generic;
 
 namespace AlcidesLaboratorio.Services
 {
-    public class PlanoDeSaudeService
+    public class PlanoDeSaudeService : ServicesBase<PlanoDeSaude>
     {
         private readonly PlanoDeSaudeRepositories planoDeSaudeRepositories;
-        public PlanoDeSaudeService(PlanoDeSaudeRepositories planoDeSaudeRepositories)
+        public PlanoDeSaudeService(PlanoDeSaudeRepositories planoDeSaudeRepositories) : base(planoDeSaudeRepositories)
         {
             this.planoDeSaudeRepositories = planoDeSaudeRepositories;
         }
 
-        public void Add(PlanoDeSaude plano)
+        public IList<PlanoDeSaude> FindByDescricao(string descricao)
         {
-            planoDeSaudeRepositories.Add(plano);
+            return planoDeSaudeRepositories.GetByDescricao(descricao);
+        }
+        public PlanoDeSaude FindById(int id)
+        {
+            return planoDeSaudeRepositories.GetById(id);
         }
         public IList<PlanoDeSaude> FindAll()
         {
             return planoDeSaudeRepositories.GetAll();
-        }
-        public void Delete(PlanoDeSaude plano)
-        {
-            planoDeSaudeRepositories.Delete(plano);
-        
-        }
-        public IList<PlanoDeSaude> GetByDescricao(string descricao)
-        {
-            return planoDeSaudeRepositories.GetByDescricao(descricao);
-        }
-        public PlanoDeSaude GetById(int id)
-        {
-            return planoDeSaudeRepositories.GetById(id);
         }
     }
 }

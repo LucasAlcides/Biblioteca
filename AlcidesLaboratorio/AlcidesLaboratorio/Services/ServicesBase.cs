@@ -14,21 +14,18 @@ namespace AlcidesLaboratorio.Services
             this.repositorioBase = repoBase;
         }
 
-        public void Add(T t)
+        public void Insert(T t)
         {
-            repositorioBase.Add(t);
+            repositorioBase.Insert(t);
         }
         public void Delete(T t)
         {
             repositorioBase.Delete(t);
         }
-        public IList<T> GetAll()
+        public void Update(T t)
         {
-            return repositorioBase.GetAll();
+            repositorioBase.Update(t);
         }
-        public T GetById(int id)
-        {
-            return repositorioBase.GetById(id);
-        }
+
     }
 }

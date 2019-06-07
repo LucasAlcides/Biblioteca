@@ -1,5 +1,6 @@
 ﻿using AlcidesLaboratorio.Contexto;
 using AlcidesLaboratorio.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,15 +16,17 @@ namespace AlcidesLaboratorio.Repositories
         {
             this.db = laboratorioContexto;
         }
-        public void Add(T t)
+        public void Insert(T t)
         {
             db.Set<T>().Add(t);
-            db.SaveChanges();
+        }
+        public void Update(T t)
+        {
+            db.Entry(t).State = EntityState.Modified;
         }
         public void Delete(T t)
         {
             db.Set<T>().Remove(t);
-            db.SaveChanges();
         }
         public T GetById(int id)
         {
@@ -35,6 +38,7 @@ namespace AlcidesLaboratorio.Repositories
         }
         public void Dispose()
         {
+            db.SaveChanges();
             db.Dispose();
             GC.SuppressFinalize(this);
         }

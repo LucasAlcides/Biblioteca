@@ -4,22 +4,15 @@ using System.Collections.Generic;
 
 namespace AlcidesLaboratorio.Services
 {
-    public class PacienteServices
+    public class PacienteServices : ServicesBase<Paciente>
     {
         private readonly PacienteRepository pacienteRepository;
 
-        public PacienteServices(PacienteRepository pacienteRepository)
+        public PacienteServices(PacienteRepository pacienteRepository) : base(pacienteRepository)
         {
             this.pacienteRepository = pacienteRepository;
         }
-        public void Add(Paciente paciente)
-        {
-            pacienteRepository.Add(paciente);
-        }
-        public void Delete(Paciente paciente)
-        {
-            pacienteRepository.Delete(paciente);
-        }
+       
         public Paciente FindById(int id)
         {
             return pacienteRepository.GetById(id);
