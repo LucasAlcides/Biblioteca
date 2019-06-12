@@ -1,5 +1,6 @@
 ﻿using AlcidesMontadora.Contexto;
 using AlcidesMontadora.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,10 @@ namespace AlcidesMontadora.Repository
         {
             Db.Peca.Remove(peca);
             Db.SaveChanges();
+        }
+        public void Update(Peca peca)
+        {
+            Db.Entry(peca).State = EntityState.Modified;
         }
         public Peca GetById(int id)
         {

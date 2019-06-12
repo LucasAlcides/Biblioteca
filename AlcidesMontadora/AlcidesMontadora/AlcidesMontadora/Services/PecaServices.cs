@@ -24,6 +24,10 @@ namespace AlcidesMontadora.Services
         {
             pecaRepository.Delete(peca);
         }
+        public void Update(Peca peca)
+        {
+            pecaRepository.Update(peca);
+        }
         public IList<Peca> FindAll()
         {
             return pecaRepository.GetAll();

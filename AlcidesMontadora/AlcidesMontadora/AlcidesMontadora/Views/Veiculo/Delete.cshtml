@@ -1,0 +1,44 @@
+﻿@model AlcidesMontadora.Models.Veiculo
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Veiculo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Categoria)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Categoria)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VeiculoId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VeiculoId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

@@ -23,6 +23,10 @@ namespace AlcidesMontadora.Services
         {
             clienteRepository.Delete(cliente);
         }
+        public void Update(Cliente cliente)
+        {
+            clienteRepository.Update(cliente);
+        }
         public Cliente FindById(int id)
         {
             return clienteRepository.GetById(id);

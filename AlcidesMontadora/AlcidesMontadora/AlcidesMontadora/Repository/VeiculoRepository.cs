@@ -1,5 +1,6 @@
 ﻿using AlcidesMontadora.Contexto;
 using AlcidesMontadora.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,10 @@ namespace AlcidesMontadora.Repository
         {
             Db.Veiculo.Add(veiculo);
             Db.SaveChanges();
+        }
+        public void Update(Veiculo veiculo)
+        {
+            Db.Entry(veiculo).State = EntityState.Modified;
         }
         public IList<Veiculo> GetAll()
         {

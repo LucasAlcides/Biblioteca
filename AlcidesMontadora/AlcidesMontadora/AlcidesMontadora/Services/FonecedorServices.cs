@@ -25,6 +25,10 @@ namespace AlcidesMontadora.Services
             fornecedorRepository.Delete(fornecedor);
             fornecedorRepository.Delete(fornecedor);
         }
+        public void Update(Fornecedor fornecedor)
+        {
+            fornecedorRepository.Update(fornecedor);
+        }
         public IList<Fornecedor> FindAll()
         {
             return fornecedorRepository.GetAll();

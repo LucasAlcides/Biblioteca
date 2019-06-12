@@ -1,5 +1,6 @@
 ﻿using AlcidesMontadora.Contexto;
 using AlcidesMontadora.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,10 @@ namespace AlcidesMontadora.Repository
         {
             Db.Cliente.Remove(cliente);
             Db.SaveChanges();
+        }
+        public void Update(Cliente cliente)
+        {
+            Db.Entry(cliente).State = EntityState.Modified;
         }
         public Cliente GetById(int id)
         {

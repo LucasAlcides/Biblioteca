@@ -9816,23 +9816,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\UNIRON\\.nuget\\packages\\": {},
+    "C:\\Users\\lucas\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\UNIRON\\Desktop\\Biblioteca\\AlcidesLaboratorio\\AlcidesLaboratorio\\AlcidesLaboratorio.csproj",
+      "projectUniqueName": "E:\\Projetos\\Faculdade\\WebAvançada\\Biblioteca\\AlcidesLaboratorio\\AlcidesLaboratorio\\AlcidesLaboratorio.csproj",
       "projectName": "AlcidesLaboratorio",
-      "projectPath": "C:\\Users\\UNIRON\\Desktop\\Biblioteca\\AlcidesLaboratorio\\AlcidesLaboratorio\\AlcidesLaboratorio.csproj",
-      "packagesPath": "C:\\Users\\UNIRON\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\UNIRON\\Desktop\\Biblioteca\\AlcidesLaboratorio\\AlcidesLaboratorio\\obj\\",
+      "projectPath": "E:\\Projetos\\Faculdade\\WebAvançada\\Biblioteca\\AlcidesLaboratorio\\AlcidesLaboratorio\\AlcidesLaboratorio.csproj",
+      "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+      "outputPath": "E:\\Projetos\\Faculdade\\WebAvançada\\Biblioteca\\AlcidesLaboratorio\\AlcidesLaboratorio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\UNIRON\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

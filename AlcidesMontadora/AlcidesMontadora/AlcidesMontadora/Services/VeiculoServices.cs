@@ -20,6 +20,10 @@ namespace AlcidesMontadora.Services
         {
             veiculoRepository.Add(veiculo);
         }
+        public void Update(Veiculo veiculo)
+        {
+            veiculoRepository.Update(veiculo);
+        }
         public void Delete(Veiculo veiculo)
         {
             veiculoRepository.Delete(veiculo);

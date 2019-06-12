@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AlcidesLaboratorio.Models;
 using AlcidesLaboratorio.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,76 +12,59 @@ namespace AlcidesLaboratorio.Controllers
     public class PacientesController : Controller
     {
         private readonly PacienteServices pacienteServices;
+        public PacientesController(PacienteServices pacienteServices)
+        {
+            this.pacienteServices = pacienteServices;
+        }
+        [HttpGet]
         public IActionResult Listar()
         {
-            return View();
+            IList<Paciente> pacientes = pacienteServices.FindAll();
+            return View(pacientes);
         }
-        [HttpGet]
-        public ActionResult Index()
-        {
-            return View();
-        }
-        [HttpGet]
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-        [HttpGet]
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        //[HttpPost]
-        //public ActionResult Create()
-        //{
-        //    try
-        //    {
-        //        return RedirectToAction(nameof(Index));
-        //    }
-        //    catch
-        //    {
-        //        return View();
-        //    }
-        //}
-
-        [HttpGet]
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
         [HttpPost]
-        public ActionResult Edit()
+        public IActionResult Listar(IList<Paciente> pacientes)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            return View(pacientes);
         }
         [HttpGet]
-
-        public ActionResult Delete(int id)
+        public IActionResult Novo()
         {
             return View();
         }
-
         [HttpPost]
-        public ActionResult Delete()
+        public IActionResult Novo(Paciente paciente)
         {
-            try
+            if (ModelState.IsValid)
             {
+                pacienteServices.Insert(paciente);
+                return RedirectToAction(nameof(Listar));
+            }
+            return View();
 
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+        }
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            Paciente paciente = pacienteServices.FindById(id);
+            return View(paciente);
+        }
+        [HttpPost]
+        public IActionResult Delete(Paciente paciente)
+        {
+            pacienteServices.Delete(paciente);
+            return RedirectToAction(nameof(Listar));
+        }
+        [HttpPost]
+        public IActionResult Update(Paciente paciente)
+        {
+            pacienteServices.Update(paciente);
+            return RedirectToAction(nameof(Listar));
+        }
+        public IActionResult Update(int id)
+        {
+            Paciente paciente = pacienteServices.FindById(id);
+            return View(paciente);
         }
     }
 }

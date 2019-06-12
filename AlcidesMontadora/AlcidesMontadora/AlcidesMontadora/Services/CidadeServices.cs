@@ -24,6 +24,10 @@ namespace AlcidesMontadora.Services
         {
             cidadeRepository.Delete(cidade);                
         }
+        public void Update(Cidade cidade)
+        {
+            cidadeRepository.Update(cidade);
+        }
         public IList<Cidade> FindAll()
         {
             return cidadeRepository.GetAll();

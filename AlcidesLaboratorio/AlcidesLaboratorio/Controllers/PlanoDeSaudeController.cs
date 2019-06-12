@@ -12,14 +12,16 @@ namespace AlcidesLaboratorio.Controllers
         {
             this.planoDeSaudeService = planoDeSaudeService;
         }
-        public IActionResult Listar(IList<PlanoDeSaude> planos)
+        [HttpGet]
+        public IActionResult Listar()
         {
+            IList<PlanoDeSaude> planos = planoDeSaudeService.FindAll();
             return View(planos);
         }
         [HttpPost]
-        public IActionResult Listar()
+        public IActionResult Listar(IList<PlanoDeSaude> planos)
         {
-            return View(planoDeSaudeService.FindAll());
+            return View(planos);
         }
         [HttpGet]
         public IActionResult Novo()
@@ -37,15 +39,17 @@ namespace AlcidesLaboratorio.Controllers
             return View();                                                                                                                         
 
         }
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+           PlanoDeSaude plano = planoDeSaudeService.FindById(id);
+            return View(plano);
+        }
         [HttpPost]
         public IActionResult Delete(PlanoDeSaude planoDeSaude)
         {
             planoDeSaudeService.Delete(planoDeSaude);
             return RedirectToAction(nameof(Listar));
-        }
-        public IActionResult Delete()
-        {
-            return View();
         }
         [HttpPost]
         public IActionResult Update(PlanoDeSaude planoDeSaude)
@@ -53,9 +57,10 @@ namespace AlcidesLaboratorio.Controllers
             planoDeSaudeService.Update(planoDeSaude);
             return RedirectToAction(nameof(Listar));
         }
-        public IActionResult Update()
+        public IActionResult Update(int id)
         {
-            return View();
+            PlanoDeSaude plano = planoDeSaudeService.FindById(id);
+            return View(plano);
         }
 
     } 

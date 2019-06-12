@@ -14,13 +14,13 @@ namespace AlcidesLaboratorio.Contexto
         }
         public DbSet<PlanoDeSaude> Planos { get; set; }
         public DbSet<Paciente> Pacientes { get; set; }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<PlanoDeSaude>(config =>
-            {
-                config.HasKey();
-            });
-            base.OnModelCreating(modelBuilder);
-        }
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<PlanoDeSaude>(config =>
+        //    {
+        //        config.HasKey();
+        //    });
+        //    base.OnModelCreating(modelBuilder);
+        //}
     }
 }
