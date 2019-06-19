@@ -16,7 +16,7 @@ namespace AlcidesMontadora.Services
             this.cidadeRepository = cidadeRepository;
         }
 
-        public void Add(Cidade cidade)
+        public void Insert(Cidade cidade)
         {
             cidadeRepository.Add(cidade);
         }

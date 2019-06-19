@@ -1080,3 +1080,4 @@ E:\Projetos\Faculdade\WebAvançada\Biblioteca\AlcidesMontadora\AlcidesMontadora\
 E:\Projetos\Faculdade\WebAvançada\Biblioteca\AlcidesMontadora\AlcidesMontadora\AlcidesMontadora\obj\Debug\net461\Razor\Views\Veiculo\Listar.g.cshtml.cs
 E:\Projetos\Faculdade\WebAvançada\Biblioteca\AlcidesMontadora\AlcidesMontadora\AlcidesMontadora\obj\Debug\net461\Razor\Views\Veiculo\Novo.g.cshtml.cs
 E:\Projetos\Faculdade\WebAvançada\Biblioteca\AlcidesMontadora\AlcidesMontadora\AlcidesMontadora\obj\Debug\net461\Razor\Views\Veiculo\Delete.g.cshtml.cs
+E:\Projetos\Faculdade\WebAvançada\Biblioteca\AlcidesMontadora\AlcidesMontadora\AlcidesMontadora\obj\Debug\net461\Razor\Views\Veiculo\Update.g.cshtml.cs

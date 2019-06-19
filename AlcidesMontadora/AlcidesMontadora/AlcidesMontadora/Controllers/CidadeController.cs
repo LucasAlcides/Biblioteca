@@ -36,7 +36,7 @@ namespace AlcidesMontadora.Controllers
         {
             if (ModelState.IsValid)
             {
-                cidadeServices.Add(cidades);
+                cidadeServices.Insert(cidades);
                 return RedirectToAction(nameof(Listar));
             }
             return View();
